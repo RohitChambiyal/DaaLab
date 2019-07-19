@@ -1,0 +1,40 @@
+
+public class yess {
+	public void gcd(int a,int b){
+		int i = 1;
+		int x;
+		if(a>b){
+			x=a;
+		}
+		else{
+			x=b;
+		}
+		
+		for(i=x;i>=1;i--){
+			
+			if(a%i==0&&b%i==0){
+				System.out.println(i);
+				break;
+			}
+			i++;
+		}
+	}
+	public static void main(String[] args) {
+		int a=30 ;
+		int b =250;
+		yess obj = new yess();
+		
+		while(a!=b){
+			if(a<b){
+				b = b-a;
+			}
+			else{
+				a = a-b;
+			}
+		}
+		obj.gcd(a,b);
+		
+		
+	}
+
+}
