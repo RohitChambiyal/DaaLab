@@ -1,0 +1,19 @@
+
+public class powerhere {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int value=2;
+		int ans=value;
+		int pow =4;
+		for(int i=1;i<4;i++)
+		{
+			ans = ans*value;
+		}
+		System.out.println(ans);
+
+	}
+
+}
