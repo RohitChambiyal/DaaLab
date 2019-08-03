@@ -1,0 +1,10 @@
+Arrange the following elements in increasing order of asymptotic growth rate:-
+
+1. n,logn,n3,nlogn,n!,2^n,n^n,25
+2. log(n!), 2^logn, n^100, 2^n, sqrt(logn), 4^logn, 2^2^n.
+3. log(n!),2^n,2^logn, n^2, n^200, n!.
+
+1. T(n) =4T(n/2)+n
+2. T(n)= 9T(n/3)+n
+3. T(n) =8T(n/2)+nlogn
+4. T(n) =T(n/2)+1.
