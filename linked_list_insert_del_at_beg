@@ -6,7 +6,21 @@ class node{
 
 public class yesyesyes {
 	node s1 = null;
-	
+	public void singlellend(int data){
+		node obj = new node();
+		obj.it =data;
+		obj.next = null;
+		if(s1==null)
+			s1 =obj;
+		else{
+			node temp = s1;
+			while(temp.next!=null){
+				temp = temp.next;
+				
+			}
+			temp.next= obj;
+		}
+	}
 	public void singlell(int data){
 		
 		
@@ -20,11 +34,30 @@ public class yesyesyes {
 	public void delete(){
 		s1 = s1.next;
 	}
+	public void deleteend(){
+		
+		if(s1.next== null){
+			s1 = null;
+		}
+		else{
+		node temp = s1;
+		
+		while(temp.next.next!=null){
+			temp=temp.next;
+			
+		}
+		temp.next = null;
+		}
+	}
 	public void display(){
+		if(s1==null){
+			System.out.println("list empty");
+		}
+		else{
 		node temp = s1;
 		while(temp!=null){
 			System.out.println(temp.it);
-			temp = temp.next;
+			temp = temp.next;}
 		}
 	}
 	public static void main(String[] args){
@@ -36,10 +69,12 @@ public class yesyesyes {
 		for(int i=0;i<n;i++){
 			data=s.nextInt();
 			ob1.singlell(data);
+			//obj.singlellend(data); to add at end
 		}
 		System.out.println("displaying before delete");
 		ob1.display();
-		ob1.delete();
+		//ob1.delete(); to delete at beginning
+		ob1.deleteend();
 		System.out.println("displaying after delete");
 		ob1.display();
 	}
