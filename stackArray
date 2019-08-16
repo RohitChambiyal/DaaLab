@@ -1,0 +1,85 @@
+import java.util.EmptyStackException;
+
+ class Stack {
+
+    private int arr[];
+    private int size;
+    private int index = 0;
+
+    public Stack(int size) {
+        this.size = size;
+        arr = new int[size];
+    }
+    public void printing(){
+        for(int i=0;i<size;i++){
+            System.out.println(arr[i]);
+        }
+    }
+
+    public void push(int element) {
+
+        if (isFull()) {
+            System.out.println("stack overflow...");
+            System.exit(0);
+        }
+
+        arr[index] = element;
+        index++;
+    }
+
+    public int pop() {
+
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        size=size-1;
+        return arr[--index];
+    }
+
+    public boolean isEmpty() {
+        if (index == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isFull() {
+        if (index == size) {
+            return true;
+        }
+        return false;
+    }
+
+    public int size() {
+        return index;
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Stack stack = new Stack(5);
+        stack.push(5);
+        stack.push(4);
+        stack.push(3);
+        stack.push(2);
+        stack.push(1);
+        System.out.println("Elements : ");
+        stack.printing();
+
+        System.out.println("size " + stack.size());
+
+        System.out.println("Popping : ");
+        
+            stack.pop();
+         System.out.println("Elements after pop : ");
+        stack.printing();
+
+        System.out.println("size after pop : " + stack.size());
+    }
+}
+
+
+
+
